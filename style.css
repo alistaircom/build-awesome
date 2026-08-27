@@ -18,33 +18,10 @@ h1, h2, h3 {
 }
 a { 
     color: var(--accent); 
-    text-decoration: underline #ffdb28 8px; /* Line type, color, thickness */
+    text-decoration: underline #ffdb288d 5px; /* Line type, color, thickness */
     text-underline-offset: 2px;               /* Space between text and line */
     text-decoration-skip-ink: auto;           /* Skips descenders for legibility */
  
-}
-
-a:hover {
-  position: relative;
-  display: inline-block;
-  text-decoration: none;
-}
-
-a:hover::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 3px;
-  bottom: -4px;
-  left: 0;
-  background-color: #00dfc4;
-  transform-origin: bottom left;
-  transition: transform 0.25s ease-out; /* Smooth growth animation */
-}
-
-a:hover::after {
-  transform: scaleX(1);
 }
 
 
@@ -77,4 +54,17 @@ article h1 {
   color: #666;
   font-size: 0.95em;
   line-height: 1.5;
+}
+
+footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid #eaeaea;
+  text-align: center;
+  font-size: 0.85em;
+  color: #888;
+}
+
+footer p {
+  margin: 0;
 }
