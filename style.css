@@ -29,3 +29,18 @@ time {
 article h1 {
   margin-bottom: 8px; /* Pulls the title closer to the date */
 }
+
+.essay-list {
+  list-style: none;
+  padding-left: 0;
+}
+.essay-list li {
+  margin-bottom: 24px;
+}
+.essay-description {
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #666;
+  font-size: 0.95em;
+  line-height: 1.5;
+}

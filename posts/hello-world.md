@@ -2,6 +2,7 @@
 layout: post.njk
 title: Hello World!
 date: 2026-08-26
+description: A quick look at my first attempt using Build Awesome.
 ---
 
 # Launching with Build Awesome
