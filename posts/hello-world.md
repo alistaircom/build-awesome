@@ -1,6 +1,7 @@
 ---
-layout: base.njk
+layout: post.njk
 title: Hello World!
+date: 2026-08-26
 ---
 
 # Launching with Build Awesome

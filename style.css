@@ -19,3 +19,13 @@ h1, h2, h3 {
 a { color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
 a:hover { color: #000; }
 .link-post { border-left: 2px solid #ddd; padding-left: 16px; margin-bottom: 24px; }
+
+time {
+  color: #888;
+  font-size: 0.9em;
+  margin-bottom: 32px;
+  display: block;
+}
+article h1 {
+  margin-bottom: 8px; /* Pulls the title closer to the date */
+}
