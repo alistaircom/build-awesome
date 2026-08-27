@@ -9,6 +9,14 @@ module.exports = function(eleventyConfig) {
     return collectionApi.getFilteredByGlob("links/*.md");
   });
 
+  eleventyConfig.addFilter("postDate", (dateObj) => {
+  return new Date(dateObj).toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric' 
+  });
+});
+
   return {
     dir: {
       input: ".",
