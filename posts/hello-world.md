@@ -5,7 +5,7 @@ date: 2026-08-26
 description: A quick look at my first attempt using Build Awesome.
 ---
 
-# Launching with Build Awesome
+## Launching with Build Awesome
 
 After backing the Kickstarter, I decided I should give Build Awesome (previously Eleventy) a try.  I have always been a Static Site fan, and this seemed like a great opportunity.  
 
