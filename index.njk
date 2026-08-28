@@ -2,7 +2,7 @@
 layout: base.njk
 title: My Awesome Site
 ---
-<h1>Essays</h1>
+<h2>Essays</h2>
 <ul class="essay-list">
 {%- for post in collections.posts | reverse -%}
   <li>
@@ -14,12 +14,4 @@ title: My Awesome Site
 {%- endfor -%}
 </ul>
 
-<h1>Interesting Links</h1>
-<div>
-{%- for link in collections.links | reverse -%}
-  <div class="link-post">
-    <a href="{{ link.data.url }}" target="_blank"><strong>{{ link.data.title }}</strong></a>
-    {{ link.content | safe }}
-  </div>
-{%- endfor -%}
-</div>
+<h2>Interesting Links</h2>
