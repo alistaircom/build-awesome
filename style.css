@@ -1,70 +1,73 @@
-:root {
-  --bg: #f3f1eb;
-  --text: #2c2c2c;
-  --accent: #4a4a4a;
+/* style.css */
+
+/* 1. Import Inter from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* 2. Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
 body {
-  background-color: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  /* Modern typography baseline */
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   line-height: 1.6;
-  max-width: 720px;
-  margin: 60px auto;
-  padding: 0 20px;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* 3. Strict Whitespace Layout Container */
+main {
+  max-width: 680px;      /* Keeps lines readable (approx 65-75 characters wide) */
+  margin: 4rem auto;     /* Centers the content with large top/bottom whitespace */
+  padding: 0 1.5rem;     /* Breathing room on mobile screens */
+}
+
+/* 4. Typography Spacing */
 h1, h2, h3 {
-  font-weight: 500;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-top: 3rem;      /* Heavy whitespace above headers to separate sections */
+  margin-bottom: 1rem;
   letter-spacing: -0.02em;
 }
-a { 
-    color: var(--accent); 
-    text-decoration: underline #ffdb288d 5px; /* Line type, color, thickness */
-    text-underline-offset: 2px;               /* Space between text and line */
-    text-decoration-skip-ink: auto;           /* Skips descenders for legibility */
- 
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.5rem; }
+
+p, ul, ol, blockquote {
+  margin-top: 0;
+  margin-bottom: 1.5rem; /* Consistent spacing below all text blocks */
 }
 
-
-.link-post { 
-    border-left: 2px solid #ddd; 
-    padding-left: 16px; 
-    margin-bottom: 24px; 
+/* 5. Article Summary Feeds */
+.article-summary {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eaeaea; /* Clean structural dividing line */
 }
 
-time {
-  color: #888;
-  font-size: 0.9em;
-  margin-bottom: 32px;
+.article-summary:last-child {
+  border-bottom: none;
+}
+
+.post-date {
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
   display: block;
 }
-article h1 {
-  margin-bottom: 8px; /* Pulls the title closer to the date */
+
+a {
+  color: #0055ff;
+  text-decoration: none;
 }
 
-.essay-list {
-  list-style: none;
-  padding-left: 0;
-}
-.essay-list li {
-  margin-bottom: 24px;
-}
-.essay-description {
-  margin-top: 4px;
-  margin-bottom: 0;
-  color: #666;
-  font-size: 0.95em;
-  line-height: 1.5;
-}
-
-footer {
-  margin-top: 80px;
-  padding-top: 24px;
-  border-top: 1px solid #eaeaea;
-  text-align: center;
-  font-size: 0.85em;
-  color: #888;
-}
-
-footer p {
-  margin: 0;
+a:hover {
+  text-decoration: underline;
 }

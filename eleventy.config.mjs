@@ -1,4 +1,4 @@
-module.exports = function(eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("style.css");
   
   eleventyConfig.addCollection("posts", function(collectionApi) {
@@ -10,18 +10,18 @@ module.exports = function(eleventyConfig) {
   });
 
   eleventyConfig.addFilter("postDate", (dateObj) => {
-  return new Date(dateObj).toLocaleDateString('en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
+    return new Date(dateObj).toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
   });
-});
 
   return {
     dir: {
       input: ".",
       output: "_site",
       includes: "_includes"
-    }
+    },
   };
-};
+}

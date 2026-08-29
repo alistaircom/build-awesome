@@ -2,16 +2,40 @@
 layout: base.njk
 title: Alistair.com
 ---
-<h2>Essays</h2>
-<ul class="essay-list">
-{%- for post in collections.posts | reverse -%}
-  <li>
-    <a href="{{ post.url }}"><strong>{{ post.data.title }}</strong></a>
-    {% if post.data.description %}
-      <p class="essay-description">{{ post.data.description }}</p>
-    {% endif %}
-  </li>
-{%- endfor -%}
-</ul>
+<h3>Posts</h3>
+<div class="post-feed">
+  {% for post in collections.posts | reverse %}
+    <article class="article-summary">
+      <!-- Uses the postDate filter from your eleventy.config.mjs -->
+      <span class="post-date">{{ post.date | postDate }}</span>
+      
+      <h2>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </h2>
+      
+      <!-- Optional: Add a brief summary if you have a 'description' in your frontmatter -->
+      {% if post.data.description %}
+        <p>{{ post.data.description }}</p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>
 
-<h2>Interesting Links</h2>
+<h3>Links</h3>
+<div class="link-feed">
+  {% for link in collections.links | reverse %}
+    <article class="article-summary">
+      <span class="post-date">{{ link.date | postDate }}</span>
+      
+      <h2>
+        <a href="{{ link.data.externalUrl | default(link.url) }}" target="_blank" rel="noopener">
+          {{ link.data.title }}
+        </a>
+      </h2>
+      
+      {% if link.data.description %}
+        <p>{{ link.data.description }}</p>
+      {% endif %}
+    </article>
+  {% endfor %}
+</div>
